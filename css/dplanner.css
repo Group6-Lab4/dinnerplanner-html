@@ -33,3 +33,12 @@ opacity:0.9;
 #showDishes .dishName{
 	
 	align: center;}
+	
+#descr{
+	margin:10px;}
+	
+#ingrd{
+	
+	background-color:#EEE0AD;
+	margin-top:10px;
+	margin-left:10px;}
