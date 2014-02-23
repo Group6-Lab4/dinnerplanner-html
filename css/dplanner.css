@@ -18,13 +18,13 @@ margin-top: 200px;
 padding:20px;
 background-color:#fff;
 opacity:0.9;
-
 }
 
 #content {
 	
 	background-color:#fff;
-	opacity:0.9}
+	opacity:0.9;
+	display:none;}
 	
 #showDishes{
 	overflow-y:scroll;
