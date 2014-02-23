@@ -1,7 +1,8 @@
 // JavaScript Document
 var SelectDishView = function(container, model){
 	
-	 
+	 var starter = model.getAllDishes('starter');
+	 var main = model.getAllDishes('main dish');
 	
 	
 	  
@@ -24,7 +25,7 @@ var SelectDishView = function(container, model){
 			   
 			   var string1 = new String( 'images/');
 			   //Todo: load dishes from model and get the src of the image, replace the "toast.jpg" with the src get from the model;
-			 // var imgsrc = new String(string1.concat(model.dishes[g][3]));
+			 var imgsrc = new String(string1.concat(starter[g][4]));
 			   var string2 = new String(string1.concat('toast.jpg'));
 			   
 			   img.attr("src", string2);
