@@ -110,7 +110,8 @@ var DinnerModel = function() {
 		'name':'French toast',
 		'type':'starter',
 		'image':'toast.jpg',
-		'description':"In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.",
+		'description':"Best French toast ever!",
+		'preparation':"In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.",
 		'ingredients':[{ 
 			'name':'eggs',
 			'quantity':0.5,
@@ -142,7 +143,8 @@ var DinnerModel = function() {
 		'name':'Sourdough Starter',
 		'type':'starter',
 		'image':'sourdough.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
+		'description':"Best sourdogh ever!",
+		'preparation':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'active dry yeast',
 			'quantity':0.5,
@@ -164,7 +166,8 @@ var DinnerModel = function() {
 		'name':'Baked Brie with Peaches',
 		'type':'starter',
 		'image':'bakedbrie.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
+		'description':"Best baked brie with peaches ever!",
+		'preparation':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'round Brie cheese',
 			'quantity':10,
@@ -186,7 +189,8 @@ var DinnerModel = function() {
 		'name':'Meat balls',
 		'type':'main dish',
 		'image':'meatballs.jpg',
-		'description':"Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.",
+		'description':"Best meat balls ever!",
+		'preparation':"Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.",
 		'ingredients':[{ 
 			'name':'extra lean ground beef',
 			'quantity':115,
@@ -248,7 +252,8 @@ var DinnerModel = function() {
 		'name':'MD 2',
 		'type':'main dish',
 		'image':'bakedbrie.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
+		'description':"Best bakebrie ever!",
+		'preparation':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ingredient 1',
 			'quantity':1,
@@ -270,7 +275,8 @@ var DinnerModel = function() {
 		'name':'MD 3',
 		'type':'main dish',
 		'image':'meatballs.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
+		'description':"Best MD3 ever!",
+		'preparation':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ingredient 1',
 			'quantity':2,
@@ -292,7 +298,8 @@ var DinnerModel = function() {
 		'name':'MD 4',
 		'type':'main dish',
 		'image':'meatballs.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
+		'description':"Best MD4 ever!",
+		'preparation':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ingredient 1',
 			'quantity':1,
@@ -314,7 +321,8 @@ var DinnerModel = function() {
 		'name':'Chocolat Ice cream',
 		'type':'dessert',
 		'image':'icecream.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
+		'description':"Best Ice cream ever!",
+		'preparation':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ice cream',
 			'quantity':100,
@@ -326,7 +334,8 @@ var DinnerModel = function() {
 		'name':'Vanilla Ice cream',
 		'type':'dessert',
 		'image':'icecream.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
+		'description':"Best Vanilla ever!",
+		'preparation':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ice cream',
 			'quantity':100,
@@ -338,7 +347,8 @@ var DinnerModel = function() {
 		'name':'Strawberry',
 		'type':'dessert',
 		'image':'icecream.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
+		'description':"Best strawberry ever!",
+		'preparation':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ice cream',
 			'quantity':100,
