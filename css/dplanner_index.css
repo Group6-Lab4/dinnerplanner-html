@@ -1,79 +1,86 @@
 body{
-	background-image:url(../images/FamilyMT.jpg);
-	background-repeat:no-repeat;
-	overflow:visible;
-	}
-	
-.container{
-	 }
-	
- #home_head {
-	background-color:#f0ad4e;
-	opacity:0.7;
-	padding: -30px;}
-#descrption {
-
-width: 600px;
-margin-top: 200px;
-padding:20px;
-background-color:#fff;
-opacity:0.9;
+    background-image:url(../images/FamilyMT.jpg);
+    background-repeat:no-repeat;
+    overflow:visible;
 }
 
-#content {
-	
-	background-color:#fff;
-	opacity:0.9;
-	display:none;}
-	
+.container{
+}
+
+#header {
+    background-color:#f0ad4e;
+    opacity:0.7;
+    padding: -30px;
+}
+
+#subheader{
+    padding: 20px;
+    background-color:#EEE0AD;
+    opacity:0.8;
+}
+
+#subheader input[type=button]{
+    margin-top:20px;
+}
+
+#content_wrapper {
+    background-color:#fff;
+    opacity:0.9;
+}
+
+.content_wrapper_home {
+
+    width: 600px;
+    margin-top: 200px;
+    padding:20px;
+}
+
+
+#content_dinner_overview {
+    padding-top: 100px;
+    padding-left:65px;
+    padding-right:65px;
+}
+
+#content_dinner_preparation {
+    padding-left:15px;
+    padding-right:15px;
+}
+
 #showDishes{
-	overflow-y:scroll;
-	margin-top:100px;}
-	
+    overflow-y:scroll;
+    margin-top:100px;
+}
+
 .dishName{
-	
-	align: center;}
-	
+
+    align: center;
+}
+
 #descr{
-	margin:10px;}
-	
+    margin:10px;
+}
+
 #ingrd{
-	
-	background-color:#EEE0AD;
-	margin-top:10px;
-	margin-left:10px;}
-	
-#row2{
-	
-	padding: 20px;
-	background-color:#EEE0AD;
-	opacity:0.8;}
-	
-#row2 button{
-	margin-top:20px;}
-	
-#dinnerthumbviews{
-	background-color:#fff;
-	padding-top: 100px;
-	padding-left:50px;
-	padding-right:50px;
-	opacity:0.9;}
-	
+
+    background-color:#EEE0AD;
+    margin-top:10px;
+    margin-left:10px;
+}
+
+
+
 #submit{
-	padding-left:300px;
-	background-color:#fff;
-	padding-bottom:50px;}
-	
+    padding-left:300px;
+    background-color:#fff;
+    padding-bottom:50px;
+}
+
 .inrow{
-	margin-top:20px;
-	padding-left: 50px;
-	padding-right: 50px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	}
-	
-.rows{
-	background-color:#fff;
-	opacity:0.9}
-	
- 
+    margin-top:20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
