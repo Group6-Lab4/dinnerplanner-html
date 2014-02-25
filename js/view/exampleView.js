@@ -5,7 +5,10 @@ var ExampleView = function (container,model) {
   	// and/or ones that responed to interaction)
 	this.numberOfGuests = container.find("#numberOfGuests");
 	this.plusButton = container.find("#plusGuest");
-	this.minusButton = container.find("#minusGuest");
+	this.minusButton = $("#minusGuest");
+        
+        this.typeSelect = $("#exampleView select[name='dishType']");
+        alert("ExampleView: " + this.typeSelect.val());
 	
 	//Creating the components dynamically. Here we create the following HTML content:
 	//
