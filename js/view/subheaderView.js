@@ -6,6 +6,10 @@ var SubheaderView = function(container, model) {
     this.numberOfGuests = container.find(".numOfGuest");
 
 
+    this.showView = function() {
+        $(container).show();
+    }
+
     /*****************************************  
      Observer implementation    
      *****************************************/

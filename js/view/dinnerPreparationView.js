@@ -5,6 +5,10 @@ var DinnerPreparationView = function(container, model) {
     var dinnerModel = model;
     var fullMenu = dinnerModel.getFullMenu();
 
+    this.showView = function() {
+        $(container).show();
+    }
+
     this.displayPreparationsOfFullMenu = function() {
 
         for (var i = 0; i < fullMenu.length; i++) {

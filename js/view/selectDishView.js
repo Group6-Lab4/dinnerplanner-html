@@ -13,10 +13,11 @@ var SelectDishView = function(container, model) {
 
     this.dishItemContainer = container.find(".dishes_container");
 
-
+    this.showView = function(){
+        $(container).show();
+    }
 
     //add rows of dishes into html and load data from dinnerModel
-
     //div we just store in temporary variable because we won't need it later
     this.displayDishesByType = function(type, filter) {
         var allDishes = model.getAllDishes(type, filter);

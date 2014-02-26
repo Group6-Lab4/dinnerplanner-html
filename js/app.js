@@ -21,11 +21,12 @@ $(document).ready(function() {
         var dinnerPreparationView = new DinnerPreparationView($("#content_dinner_preparation"), model);
         var dinnerOverviewView = new DinnerOverviewView($("#content_dinner_overview"), model);
         var dishDetailsView = new DishDetailsView($("#content_dish_details"), model);
+        var dishDetailsViewController = new DishDetailsViewController(dishDetailsView, model);
 
 
-    //  gotoHomePage();
-      gotoSelectDishPage();
-  //    gotoDishDetailsPage();
+        gotoHomePage();
+//      gotoSelectDishPage();
+        //    gotoDishDetailsPage();
 //         gotoDinnerOverviewPage();
         //       gotoDinnerPreparationPage();
 
@@ -46,8 +47,8 @@ $(document).ready(function() {
     $("#content_dinner_overview").find("input[type=button]").click(function() {
         gotoDinnerPreparationPage(true);
     });
-    
-    
+
+
 
 
 });
@@ -78,8 +79,8 @@ var gotoDishDetailsPage = function(dishId) {
 
     $("#sidebar").show();
     $("#content_dish_details").show();
-   // model.selectedDishDetailId = dishId;
-    
+    // model.selectedDishDetailId = dishId;
+
 
 };
 

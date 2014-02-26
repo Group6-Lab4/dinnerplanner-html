@@ -6,6 +6,9 @@ var SideBarView = function(container, model) {
     this.numberOfGuests = container.find("input[name=numOfGeust]");
     this.menuTable = container.find("table");
 
+    this.showView = function() {
+        $(container).show();
+    }
 
     this.updateNumOfGuest = function() {
         this.numberOfGuests.val(model.getNumberOfGuests());
@@ -14,7 +17,7 @@ var SideBarView = function(container, model) {
     this.updateSelectedDishes = function() {
         // first clear the table
         $(this.menuTable).find("tbody").html("");
-        
+
         var selectedDishes = model.getFullMenu();
         var totalMenuPrice = 0;
         for (key in selectedDishes) {

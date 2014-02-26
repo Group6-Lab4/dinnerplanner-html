@@ -3,24 +3,24 @@ var DinnerModel = function() {
 
     var menu = [];
     var numberOfGuests = 1; //set default number of guests
-    menu['starter'] = 1; //set a starter to the menu, to use for testing
-    menu['main dish'] = 100; //set a starter to the menu, to use for testing
-    menu['dessert'] = 200; //set a starter to the menu, to use for testing
+//    menu['starter'] = 1; //set a starter to the menu, to use for testing
+//    menu['main dish'] = 100; //set a starter to the menu, to use for testing
+//    menu['dessert'] = 200; //set a starter to the menu, to use for testing
     var selectedDishDetailId = 202;
-    
-     
 
-    this.getSelectedDishDetailId = function(){
+
+
+    this.getSelectedDishDetailId = function() {
         return selectedDishDetailId;
-       // alert("getSelectedDishId called id =");
+        // alert("getSelectedDishId called id =");
     };
-    
-    this.setSelectedDishDetailId = function(id){
+
+    this.setSelectedDishDetailId = function(id) {
         selectedDishDetailId = id;
-       // alert("setSelectedDishID called id=" + id);
+//         alert("setSelectedDishID called id=" + id);
         notifyObservers("selectedDishDetailId");
     };
-    
+
     this.setNumberOfGuests = function(num) {
         if (num > 0) {
             numberOfGuests = num;
@@ -36,8 +36,8 @@ var DinnerModel = function() {
     this.getSelectedDishId = function(type) {
         return menu[type];
     };
-    
-        //Returns the dish that is on the menu for selected type 
+
+    //Returns the dish that is on the menu for selected type 
     this.getSelectedDish = function(type) {
         return this.getDish(menu[type]);
     };
@@ -67,7 +67,7 @@ var DinnerModel = function() {
         for (var key in dish["ingredients"]) {
             dishPrice += dish["ingredients"][key]["price"];
         }
-        
+
         return dishPrice;
     }
 
@@ -328,7 +328,7 @@ var DinnerModel = function() {
                     'price': 4
                 }]
         }, {
-            'id': 102,
+            'id': 103,
             'name': 'MD 4',
             'type': 'main dish',
             'image': 'meatballs.jpg',
