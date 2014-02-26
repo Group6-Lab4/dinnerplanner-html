@@ -77,6 +77,13 @@ body{
     padding-bottom:50px;
 }
 
+ #select h4{
+    padding: 15px;
+}
+
+#sidebar h4{
+    padding: 15px;
+}
 .dishName{
 
     align: center;
@@ -86,6 +93,13 @@ body{
     margin:10px;
 }
 
+#content_dish_details input[name=confirmDish]{
+    
+    margin:10px;
+}
+ 
+
+
 #ingrd{
 
     background-color:#EEE0AD;
@@ -93,9 +107,13 @@ body{
     margin-left:10px;
 }
 
+#ingrd h4{
+    padding:10px;
+}
 
-
-
+#ingrd p{
+    padding:10px;
+}
 
 .inrow{
     margin-top:20px;
