@@ -86,6 +86,7 @@ var DishDetailsView = function(container, model) {
         //back to select button
         //display the row of preparation
         var preparationRow = $("#preparation p");
+       // alert("create preparation dynamically");
         preparationRow.html(this.selectedDishDetail.preparation);
 
     };
