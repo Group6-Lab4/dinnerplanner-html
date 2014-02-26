@@ -10,9 +10,10 @@ $(document).ready(function() {
         //And create the needed controllers and views
         //var exampleView = new ExampleView($("#exampleView"),model);
         //var exampleViewControllSer = new ExampleViewController(exampleView,model);
-        var selectDishView = new SelectDishView($("#showDishes"), model);
+        var selectDishView = new SelectDishView($("#content_select_dish"), model);
         var selectDishViewController = new SelectDishViewController(selectDishView, model);
         
+        var sideBarView = new SideBarView($("#sidebar"), model);
 
 
         gotoHomePage();

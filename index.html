@@ -19,6 +19,8 @@
         <script src="js/app.js"></script>
         <script src="js/model/dinnerModel.js"></script>
         <script src="js/view/selectDishView.js"></script>
+        <script src="js/view/selectDishViewController.js"></script>
+        <script src="js/view/sideBarView.js"></script>
         <!--<script src="js/view/exampleView.js"></script>
         <script src="js/view/exampleViewController.js"></script>
         -->
@@ -28,6 +30,7 @@
             <!--row for headline "HOMELETTE"-->
             <div class="row" id="header">
                 <div class="col-md-12 col-lg-12">
+<!--                    TODO: make the heading a link-->
                     <h1>HOMELETTE <small><em>From the best chefs in the world directly into your kitchen</em></small></h1>
                 </div>
             </div>
@@ -122,7 +125,7 @@
                             </div> 
                         </div>           
                         <!-- thumbnails of the dishes, load data from dinnerModel-->
-                        <div id="showDishes">
+                        <div id="showDishes" class="dishes_container">
 
                         </div>
                     </div>
@@ -325,7 +328,7 @@
                             </div>
                         </div>
                     
-                </div>
+                    </div>
 
             </div>
         </div>
