@@ -62,7 +62,11 @@ var DishDetailsView = function(container, model) {
 
             var tr = $("<tr>");
             var quantity = this.selectedDishDetail.ingredients[i].quantity * numberOfGuests;
-            //   alert(quantity);
+            
+//            console.log("Original: " + quantity + " ParsedInt: " + parseInt(quantity));
+            if(quantity != parseInt(quantity)){
+                quantity = quantity.toFixed(2);
+            }
             var unit = this.selectedDishDetail.ingredients[i].unit;
 
             // var quantityWithUnit = new String(quantity.concat(unit));
@@ -76,6 +80,8 @@ var DishDetailsView = function(container, model) {
 
             var price = $("<td>");
             var ingrdPrice = this.selectedDishDetail.ingredients[i].price * numberOfGuests;
+
+            
             price.html(ingrdPrice);
 
             tr.append(quantityUnity);
