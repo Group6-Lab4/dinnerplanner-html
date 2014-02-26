@@ -13,6 +13,18 @@ body{
     padding: -30px;
 }
 
+#header .home_logo{
+    color: inherit;
+}
+
+#header h1{
+    float: left;
+}
+
+#header h1.subheading{
+    padding-left: 20px;
+}
+
 #subheader{
     padding: 20px;
     background-color:#EEE0AD;
