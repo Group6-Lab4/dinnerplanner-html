@@ -95,11 +95,11 @@ var DinnerModel = function() {
             if (filter) {
                 found = false;
                 $.each(dish.ingredients, function(index, ingredient) {
-                    if (ingredient.name.indexOf(filter) != -1) {
+                    if (ingredient.name.toLowerCase().indexOf(filter.toLowerCase()) != -1) {
                         found = true;
                     }
                 });
-                if (dish.name.indexOf(filter) != -1)
+                if (dish.name.toLowerCase().indexOf(filter.toLowerCase()) != -1)
                 {
                     found = true;
                 }

@@ -118,22 +118,22 @@
                                 <p>______________________________________________________________________________</p>
                             </div>
                             <div class="col-md-4 col-lg-4">
-                                <form class="form-inline" role="form">
-                                    <input type="search" name="searchDish" />
+                                <form class="form-inline searchForm" role="form">
+                                    <input type="text" name="searchDish" placeholder="Enter keywords"/>
                                     <input type="button" class="btn btn-warning" value="Search">
                                 </form>
                             </div>
                             <div class="col-md-4 col-gl-4">
-                                <select type="mutiple" name="dishType">
-                                    <option value="All">All</option>
+                                <select name="dishType">
+                                    <option value="all" selected="selected">All</option>
                                     <option value="starter">Starter</option>
-                                    <option value="main">Main</option>
+                                    <option value="main dish">Main</option>
                                     <option value="dessert">Dessert</option>
                                 </select>
                             </div> 
                         </div>           
                         <!-- thumbnails of the dishes, load data from dinnerModel-->
-                        <div id="showDishes" class="dishes_container">
+                        <div class="dishes_container">
 
                         </div>
                     </div>
