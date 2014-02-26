@@ -11,7 +11,7 @@ var SelectDishView = function(container, model) {
     this.searchButton = this.searchForm.find("input[type=button]");
     this.searchText = this.searchForm.find("input[name=searchDish]");
 
-    this.dishItemImg = container.find(".dishes_container img");
+    this.dishItemContainer = container.find(".dishes_container");
 
 
 
@@ -87,9 +87,6 @@ var SelectDishView = function(container, model) {
         else {
             this.displayDishesByType(type, filter)
         }
-
-        //IMPORTANT: update before object for event handlers, otherwise event handlers wont work
-        this.dishItemImg = container.find(".dishes_container img");
     }
 
     //show all dishes initially
