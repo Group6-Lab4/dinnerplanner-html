@@ -21,6 +21,7 @@
         <script src="js/view/selectDishView.js"></script>
         <script src="js/view/selectDishViewController.js"></script>
         <script src="js/view/sideBarView.js"></script>
+        <script src="js/view/sideBarViewController.js"></script>
         <!--<script src="js/view/exampleView.js"></script>
         <script src="js/view/exampleViewController.js"></script>
         -->
@@ -30,7 +31,7 @@
             <!--row for headline "HOMELETTE"-->
             <div class="row" id="header">
                 <div class="col-md-12 col-lg-12">
-<!--                    TODO: make the heading a link-->
+                    <!--                    TODO: make the heading a link-->
                     <h1>HOMELETTE <small><em>From the best chefs in the world directly into your kitchen</em></small></h1>
                 </div>
             </div>
@@ -55,16 +56,20 @@
                                 <p>People</p>
                             </div>
                             <div class="col-md-1 col-lg-1">
-                                <input type="number" name="numOfGeust" min="0" />
+                                <input type="number" name="numOfGeust" min="1" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 col-lg-12">
                                 <table class="table">
-                                    <tr>
-                                        <th> Dish Name</th>
-                                        <th> Cost </th>
-                                    </tr>
+                                    <thead>
+                                        <tr>
+                                            <th> Dish Name</th>
+                                            <th> Cost </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                    <tfoot><td></td><td>100SEK</td></tfoot>
                                 </table>
                             </div>
                         </div>
@@ -198,7 +203,8 @@
                                                 <td>SEK</td>
                                                 <td>8.04</td>
                                             </tr>
-                                        </tbody></table>
+                                        </tbody>
+                                    </table>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 col-lg-6">
@@ -263,72 +269,72 @@
 
                 <!-- Content of p.5 dinner_preparation -->
                 <div class="content" id="content_dinner_preparation">
-                        <div class="row inrow">
-                            <div class="col-md-2 col-lg-2">
-                                <img class="img-thumbnail" src="images/meatballs.jpg">
-                            </div>
-                            <div class="col-md-4 col-lg-4">
-                                <h3>MEATBALLS</h3>
-                                <p>Description of meatballs, Description of meatballs,Description of meatballs,Description of meatballs,Description of meatballs</p>
-
-                            </div>
-                            <div class="col-md-6 col-lg-6">
-                                <h5>Preparation</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
+                    <div class="row inrow">
+                        <div class="col-md-2 col-lg-2">
+                            <img class="img-thumbnail" src="images/meatballs.jpg">
                         </div>
-                        <div class="row inrow">
-                            <div class="col-md-2 col-lg-2">
-                                <img class="img-thumbnail" src="images/meatballs.jpg">
-                            </div>
-                            <div class="col-md-4 col-lg-4">
-                                <h3>MEATBALLS</h3>
-                                <p>Description of meatballs, Description of meatballs,Description of meatballs,Description of meatballs,Description of meatballs</p>
+                        <div class="col-md-4 col-lg-4">
+                            <h3>MEATBALLS</h3>
+                            <p>Description of meatballs, Description of meatballs,Description of meatballs,Description of meatballs,Description of meatballs</p>
 
-                            </div>
-                            <div class="col-md-6 col-lg-6">
-                                <h5>Preparation</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
                         </div>
-                        <div class="row inrow">
-                            <div class="col-md-2 col-lg-2">
-                                <img class="img-thumbnail" src="images/meatballs.jpg">
-                            </div>
-                            <div class="col-md-4 col-lg-4">
-                                <h3>MEATBALLS</h3>
-                                <p>Description of meatballs, Description of meatballs,Description of meatballs,Description of meatballs,Description of meatballs</p>
-
-                            </div>
-                            <div class="col-md-6 col-lg-6">
-                                <h5>Preparation</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
+                        <div class="col-md-6 col-lg-6">
+                            <h5>Preparation</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
-                        <div class="row inrow">
-                            <div class="col-md-2 col-lg-2">
-                                <img class="img-thumbnail" src="images/meatballs.jpg">
-                            </div>
-                            <div class="col-md-4 col-lg-4">
-                                <h3>MEATBALLS</h3>
-                                <p>Description of meatballs, Description of meatballs,Description of meatballs,Description of meatballs,Description of meatballs</p>
-
-                            </div>
-                            <div class="col-md-6 col-lg-6">
-                                <h5>Preparation</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                    
                     </div>
+                    <div class="row inrow">
+                        <div class="col-md-2 col-lg-2">
+                            <img class="img-thumbnail" src="images/meatballs.jpg">
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                            <h3>MEATBALLS</h3>
+                            <p>Description of meatballs, Description of meatballs,Description of meatballs,Description of meatballs,Description of meatballs</p>
+
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <h5>Preparation</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                    <div class="row inrow">
+                        <div class="col-md-2 col-lg-2">
+                            <img class="img-thumbnail" src="images/meatballs.jpg">
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                            <h3>MEATBALLS</h3>
+                            <p>Description of meatballs, Description of meatballs,Description of meatballs,Description of meatballs,Description of meatballs</p>
+
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <h5>Preparation</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                    <div class="row inrow">
+                        <div class="col-md-2 col-lg-2">
+                            <img class="img-thumbnail" src="images/meatballs.jpg">
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                            <h3>MEATBALLS</h3>
+                            <p>Description of meatballs, Description of meatballs,Description of meatballs,Description of meatballs,Description of meatballs</p>
+
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <h5>Preparation</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
         </div>

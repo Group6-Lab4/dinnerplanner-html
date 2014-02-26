@@ -14,6 +14,7 @@ $(document).ready(function() {
         var selectDishViewController = new SelectDishViewController(selectDishView, model);
         
         var sideBarView = new SideBarView($("#sidebar"), model);
+        var sideBarViewController = new SideBarViewController(sideBarView, model);
 
 
         gotoHomePage();

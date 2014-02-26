@@ -4,23 +4,31 @@ var SideBarView = function(container, model) {
     // Get all the relevant elements of the view (ones that show data
     // and/or ones that responed to interaction)
     this.numberOfGuests = container.find("input[name=numOfGeust]");
-    this.menuTable = container.find("table tbody");
+    this.menuTable = container.find("table");
+
+
+    this.updateNumOfGuest = function() {
+        this.numberOfGuests.val(model.getNumberOfGuests());
+    };
+
+    this.updateSelectedDishes = function() {
+        // first clear the table
+        $(this.menuTable).find("tbody").html("");
+        
+        var selectedDishes = model.getFullMenu();
+        var totalMenuPrice = 0;
+        for (key in selectedDishes) {
+            var eachDish = selectedDishes[key];
+            var totalPrice = model.getDishPrice(eachDish["id"]) * model.getNumberOfGuests();
+            totalMenuPrice += totalPrice;
+            $(this.menuTable).find("tbody").append("<tr><td>" + eachDish["name"] + "</td><td>" + totalPrice + "</td></tr>");
+        }
+        $(this.menuTable).find("tfoot td:last").html(totalMenuPrice + " SEK");
+    };
 
     // Populate data from model
-//    alert(model.getNumberOfGuests());
-    this.numberOfGuests.val(model.getNumberOfGuests());
-
-
-    var selectedDishes = model.getFullMenu();
-    for (key in selectedDishes) {
-//        alert(selectedDishes[key]["name"]);
-        $(this.menuTable).append("<tr><td>name</td><td>price</td></tr>");
-    }
-
-
-    //Set the inital values of the components
-//    this.numberOfGuests.html(model.getNumberOfGuests());
-//    this.totalPrice.html(model.getTotalMenuPrice());
+    this.updateNumOfGuest();
+    this.updateSelectedDishes();
 
     /*****************************************  
      Observer implementation    
@@ -29,10 +37,13 @@ var SideBarView = function(container, model) {
     //Register an observer to the model
     model.addObserver(this);
 
+    var that = this;
     //This function gets called when there is a change at the model
     this.update = function(arg) {
-        this.numberOfGuests.html(model.getNumberOfGuests());
-        this.totalPrice.html(model.getTotalMenuPrice());
+//        alert("Changed data: " + arg);
+        that.updateSelectedDishes();
     }
+
+
 }
 
