@@ -6,8 +6,21 @@ var DinnerModel = function() {
     menu['starter'] = 1; //set a starter to the menu, to use for testing
     menu['main dish'] = 100; //set a starter to the menu, to use for testing
     menu['dessert'] = 200; //set a starter to the menu, to use for testing
+    var selectedDishDetailId = 202;
+    
+     
 
-
+    this.getSelectedDishDetailId = function(){
+        return selectedDishDetailId;
+       // alert("getSelectedDishId called id =");
+    };
+    
+    this.setSelectedDishDetailId = function(id){
+        selectedDishDetailId = id;
+       // alert("setSelectedDishID called id=" + id);
+        notifyObservers("selectedDishDetailId");
+    };
+    
     this.setNumberOfGuests = function(num) {
         if (num > 0) {
             numberOfGuests = num;

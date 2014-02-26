@@ -25,6 +25,7 @@
         
         <script src="js/view/subheaderView.js"></script>
         <script src="js/view/dinnerPreparationView.js"></script>
+         <script src="js/view/dishDetailsView.js"></script>
         <script src="js/view/dinnerOverviewView.js"></script>
         <!--<script src="js/view/exampleView.js"></script>
         <script src="js/view/exampleViewController.js"></script>
@@ -154,13 +155,14 @@
                             <!-- ingredients table -->       
                             <div class="col-md-6 col-lg-6" id="ingrd">
                                 <div class="row">
-                                    <table class="table">
+                                   <!-- <table class="table">
                                         <tbody><tr>
                                                 <td><h4>INGREDIENTS FOR </h4></td>
                                                 <td><h4 id="numOfGuests">4 </h4></td>
                                                 <td><h4>PEOPLE</h4></td>
                                             </tr>
-                                        </tbody></table>
+                                        </tbody></table> -->
+                                     <h4>INGREDIENTS FOR <span id ="numOfGuests">4</span> PEOPLE</h4>
                                     <p>__________________________________________________________</p>
                                 </div>
                                 <div class="row">
@@ -215,7 +217,7 @@
                                         <input type="button" class="btn btn-warning" value="Confirm Dish" />
                                     </div>
                                     <div class="col-md-6 col-lg-6">
-                                        <p>SEK  40.5</p>
+                                        <p>SEK <span id="dishPrice"> 40.5</span></p>
                                     </div>
 
 

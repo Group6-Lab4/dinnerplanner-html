@@ -20,13 +20,14 @@ $(document).ready(function() {
         var subheaderView = new SubheaderView($("#subheader"), model);
         var dinnerPreparationView = new DinnerPreparationView($("#content_dinner_preparation"), model);
         var dinnerOverviewView = new DinnerOverviewView($("#content_dinner_overview"), model);
+        var dishDetailsView = new DishDetailsView($("#content_dish_details"), model);
 
 
- //       gotoHomePage();
-//        gotoSelectDishPage();
-//         gotoDishDetailsPage();
+    //  gotoHomePage();
+      gotoSelectDishPage();
+  //    gotoDishDetailsPage();
 //         gotoDinnerOverviewPage();
-               gotoDinnerPreparationPage();
+        //       gotoDinnerPreparationPage();
 
     });
 
@@ -34,7 +35,7 @@ $(document).ready(function() {
 
     //TODO:MOVE below to controllers
     //Buttons handlers regarding page flow
-    $("#btnCreateDinner, #subheader input").click(function() {
+    $("#btnCreateDinner, #subheader input, #descr input[name=back]").click(function() {
         gotoSelectDishPage(true);
     });
 
@@ -45,6 +46,8 @@ $(document).ready(function() {
     $("#content_dinner_overview").find("input[type=button]").click(function() {
         gotoDinnerPreparationPage(true);
     });
+    
+    
 
 
 });
@@ -75,6 +78,8 @@ var gotoDishDetailsPage = function(dishId) {
 
     $("#sidebar").show();
     $("#content_dish_details").show();
+   // model.selectedDishDetailId = dishId;
+    
 
 };
 

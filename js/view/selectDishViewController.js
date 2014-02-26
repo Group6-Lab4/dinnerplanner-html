@@ -22,6 +22,8 @@ var SelectDishViewController = function(view, model) {
     
     // Using dishItemContainer as a delegate parent to handle events because content inside are dynacmically added
     $(view.dishItemContainer).on("click", "img" ,function(){
+         var dishId = $(this).attr("dish-id");
+          model.setSelectedDishDetailId(dishId);
 //        alert("click image: " + $(this).attr("dish-id"));
         gotoDishDetailsPage($(this).attr("dish-id"));
         
