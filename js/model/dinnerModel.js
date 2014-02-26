@@ -20,7 +20,7 @@ var DinnerModel = function() {
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
 		return menu[type];
-	}
+	};
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
@@ -29,7 +29,7 @@ var DinnerModel = function() {
 			menuDishes.push(this.getDish(menu[key]));
 		}
 		return menuDishes;
-	}
+	};
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
@@ -39,7 +39,7 @@ var DinnerModel = function() {
 			ingredients = ingredients.concat(dish.ingredients);
 		}
 		return ingredients;
-	}
+	};
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
@@ -49,13 +49,13 @@ var DinnerModel = function() {
 			sum += parseFloat(ingredients[key].price) * this.getNumberOfGuests();
 		}
 		return sum;
-	}
+	};
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
 		menu[this.getDish(id).type] = id; 
-	}
+	};
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {

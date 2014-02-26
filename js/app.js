@@ -11,6 +11,8 @@ $(document).ready(function() {
         //var exampleView = new ExampleView($("#exampleView"),model);
         //var exampleViewControllSer = new ExampleViewController(exampleView,model);
         var selectDishView = new SelectDishView($("#showDishes"), model);
+        var selectDishViewController = new SelectDishViewController(selectDishView, model);
+        
 
 
         gotoHomePage();
