@@ -24,9 +24,9 @@ var SideBarView = function(container, model) {
             var eachDish = selectedDishes[key];
             var totalPrice = model.getDishPrice(eachDish["id"]) * model.getNumberOfGuests();
             totalMenuPrice += totalPrice;
-            $(this.menuTable).find("tbody").append("<tr><td>" + eachDish["name"] + "</td><td>" + totalPrice + "</td></tr>");
+            $(this.menuTable).find("tbody").append("<tr><td>" + eachDish["name"] + "</td><td>" + totalPrice + '</td><td><input type="button" class="btn-xs btn-danger" value="x" dish-id="'+eachDish.id+'" /></td></tr>');
         }
-        $(this.menuTable).find("tfoot td:last").html(totalMenuPrice + " SEK");
+        $(this.menuTable).find("tfoot td.cost").html(totalMenuPrice + " SEK");
     };
 
     // Populate data from model
