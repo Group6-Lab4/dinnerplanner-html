@@ -37,11 +37,10 @@ var SideBarView = function(container, model) {
     //Register an observer to the model
     model.addObserver(this);
 
-    var that = this;
     //This function gets called when there is a change at the model
     this.update = function(arg) {
 //        alert("Changed data: " + arg);
-        that.updateSelectedDishes();
+        this.updateSelectedDishes();
     }
 
 

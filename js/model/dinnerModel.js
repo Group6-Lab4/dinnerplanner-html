@@ -5,7 +5,7 @@ var DinnerModel = function() {
     var numberOfGuests = 1; //set default number of guests
     menu['starter'] = 1; //set a starter to the menu, to use for testing
     menu['main dish'] = 100; //set a starter to the menu, to use for testing
-    menu['desert'] = 200; //set a starter to the menu, to use for testing
+    menu['dessert'] = 200; //set a starter to the menu, to use for testing
 
 
     this.setNumberOfGuests = function(num) {
@@ -20,8 +20,13 @@ var DinnerModel = function() {
     }
 
     //Returns the dish that is on the menu for selected type 
-    this.getSelectedDish = function(type) {
+    this.getSelectedDishId = function(type) {
         return menu[type];
+    };
+    
+        //Returns the dish that is on the menu for selected type 
+    this.getSelectedDish = function(type) {
+        return this.getDish(menu[type]);
     };
 
     //Returns all the dishes on the menu.

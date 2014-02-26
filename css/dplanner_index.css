@@ -47,9 +47,17 @@ body{
     padding-right:15px;
 }
 
+/*content_select_dish*/
 #content_select_dish .dishes_container{
     /*overflow-y:scroll;*/
     margin-top:100px;
+}
+
+/*content_dinner_overview*/
+#content_dinner_overview .content_footer{
+    padding-left:300px;
+    background-color:#fff;
+    padding-bottom:50px;
 }
 
 .dishName{
@@ -70,11 +78,7 @@ body{
 
 
 
-#submit{
-    padding-left:300px;
-    background-color:#fff;
-    padding-bottom:50px;
-}
+
 
 .inrow{
     margin-top:20px;

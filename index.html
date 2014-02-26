@@ -22,6 +22,9 @@
         <script src="js/view/selectDishViewController.js"></script>
         <script src="js/view/sideBarView.js"></script>
         <script src="js/view/sideBarViewController.js"></script>
+        
+        <script src="js/view/subheaderView.js"></script>
+        <script src="js/view/dinnerOverviewView.js"></script>
         <!--<script src="js/view/exampleView.js"></script>
         <script src="js/view/exampleViewController.js"></script>
         -->
@@ -37,7 +40,7 @@
             </div>
             <div class="row" id="subheader">
                 <div class="col-md-8 col-lg-8">
-                    <h3 id="myDinner">My Dinner : 4 people</h3>
+                    <h3>My Dinner : <span class="numOfGuest">4</span> people</h3>
                 </div>
                 <div class="col-md-4 col-lg-4">
                     <input type="button" class="btn btn-warning" value="Go back and edit dinner" />
@@ -233,17 +236,17 @@
                 <div class="content" id="content_dinner_overview">
                     <div class="row">
                         <div class="col-md-10 col-lg-10">
-                            <div class="col-lg-2 col md-2">
+                            <div class="col-lg-2 col md-2 selectedDish">
                                 <img class="img-thumbnail" src="images/toast.jpg"/>
                                 <h4 class="dishName">Toast</h4>
                                 <p>25.0 SEK</p>
                             </div>
-                            <div class="col-lg-2 col md-2">
+                            <div class="col-lg-2 col md-2 selectedDish">
                                 <img class="img-thumbnail" src="images/toast.jpg"/>
                                 <h4 class="dishName">Toast</h4>
                                 <p>25.0 SEK</p>
                             </div>
-                            <div class="col-lg-2 col md-2 doverview">
+                            <div class="col-lg-2 col md-2 selectedDish">
                                 <img class="img-thumbnail" src="images/toast.jpg"/>
                                 <h4 class="dishName">Toast</h4>
                                 <p>25.0 SEK</p>
@@ -251,9 +254,9 @@
                         </div>
                         <div class="col-md-2 col-lg-2">
                             <h4>Total</h4>
-                            <p>280.5 SEK</p>
+                            <p class="totalPrice">280.5 SEK</p>
                         </div>
-                        <div class=" row" id="submit">
+                        <div class="row content_footer">
                             <div class="col-lg-12 col-md-12">
                                 <p>______________________________________________________________________</p>
                             </div>

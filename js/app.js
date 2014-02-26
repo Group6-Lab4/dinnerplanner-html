@@ -15,6 +15,10 @@ $(document).ready(function() {
         
         var sideBarView = new SideBarView($("#sidebar"), model);
         var sideBarViewController = new SideBarViewController(sideBarView, model);
+        
+        
+        var subheaderView = new SubheaderView($("#subheader"), model);
+        var dinnerOverviewView = new DinnerOverviewView($("#content_dinner_overview"), model);
 
 
         gotoHomePage();
