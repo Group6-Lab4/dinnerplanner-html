@@ -18,14 +18,15 @@ $(document).ready(function() {
 
 
         var subheaderView = new SubheaderView($("#subheader"), model);
+        var dinnerPreparationView = new DinnerPreparationView($("#content_dinner_preparation"), model);
         var dinnerOverviewView = new DinnerOverviewView($("#content_dinner_overview"), model);
 
 
-        gotoHomePage();
+ //       gotoHomePage();
 //        gotoSelectDishPage();
 //         gotoDishDetailsPage();
 //         gotoDinnerOverviewPage();
-//         gotoDinnerPreparationPage();
+               gotoDinnerPreparationPage();
 
     });
 
