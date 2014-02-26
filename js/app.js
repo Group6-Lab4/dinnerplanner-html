@@ -1,3 +1,5 @@
+var Views = {};
+
 $(document).ready(function() {
 
     $(function() {
@@ -10,18 +12,19 @@ $(document).ready(function() {
         //And create the needed controllers and views
         //var exampleView = new ExampleView($("#exampleView"),model);
         //var exampleViewControllSer = new ExampleViewController(exampleView,model);
-        var selectDishView = new SelectDishView($("#content_select_dish"), model);
-        var selectDishViewController = new SelectDishViewController(selectDishView, model);
-
-        var sideBarView = new SideBarView($("#sidebar"), model);
-        var sideBarViewController = new SideBarViewController(sideBarView, model);
+        Views.selectDishView = new SelectDishView($("#content_select_dish"), model);
+        var selectDishViewController = new SelectDishViewController(Views.selectDishView, model);
 
 
-        var subheaderView = new SubheaderView($("#subheader"), model);
-        var dinnerPreparationView = new DinnerPreparationView($("#content_dinner_preparation"), model);
-        var dinnerOverviewView = new DinnerOverviewView($("#content_dinner_overview"), model);
-        var dishDetailsView = new DishDetailsView($("#content_dish_details"), model);
-        var dishDetailsViewController = new DishDetailsViewController(dishDetailsView, model);
+        Views.sideBarView = new SideBarView($("#sidebar"), model);
+        var sideBarViewController = new SideBarViewController(Views.sideBarView, model);
+
+
+        Views.subheaderView = new SubheaderView($("#subheader"), model);
+        Views.dinnerPreparationView = new DinnerPreparationView($("#content_dinner_preparation"), model);
+        Views.dinnerOverviewView = new DinnerOverviewView($("#content_dinner_overview"), model);
+        Views.dishDetailsView = new DishDetailsView($("#content_dish_details"), model);
+        var dishDetailsViewController = new DishDetailsViewController(Views.dishDetailsView, model);
 
 
         gotoHomePage();
@@ -62,33 +65,34 @@ var gotoHomePage = function() {
     $("#content_home").show();
 };
 
-var gotoSelectDishPage = function(fadeEffect) {
-    resetPage(fadeEffect);
+var gotoSelectDishPage = function() {
+    resetPage();
 
-    if (fadeEffect) {
-        $("#sidebar").fadeIn(100);
-        $("#content_select_dish").fadeIn(100);
-    } else {
-        $("#sidebar").show();
-        $("#content_select_dish").show();
-    }
+    Views.sideBarView.showView();
+    Views.selectDishView.showView();
+//        $("#sidebar").show();
+//        $("#content_select_dish").show();
+
 };
 
 var gotoDishDetailsPage = function(dishId) {
     resetPage();
 
-    $("#sidebar").show();
-    $("#content_dish_details").show();
-    // model.selectedDishDetailId = dishId;
+//    $("#sidebar").show();
+//    $("#content_dish_details").show();
 
+    Views.dishDetailsView.showView(dishId);
+    Views.sideBarView.showView();
 
 };
 
 var gotoDinnerOverviewPage = function() {
     resetPage();
 
-    $("#subheader").show();
-    $("#content_dinner_overview").show();
+    Views.subheaderView.showView();
+    Views.dinnerOverviewView.showView();
+//    $("#subheader").show();
+//    $("#content_dinner_overview").show();
 
 
 };
@@ -96,24 +100,18 @@ var gotoDinnerOverviewPage = function() {
 var gotoDinnerPreparationPage = function() {
     resetPage();
 
-    $("#subheader").show();
-    $("#content_dinner_preparation").show();
+    Views.subheaderView.showView();
+    Views.dinnerPreparationView.showView();
+//    $("#subheader").show();
+//    $("#content_dinner_preparation").show();
 };
 
-var resetPage = function(fadeEffect) {
+var resetPage = function() {
     $("#content_wrapper").removeClass("content_wrapper_home");
 
-    if (fadeEffect) {
+    $(".content").hide();
 
-        $(".content").fadeOut(300);
+    $("#subheader").hide();
+    $("#sidebar").hide();
 
-        $("#subheader").fadeOut(300)
-        $("#sidebar").fadeOut(300)
-    } else {
-
-        $(".content").hide();
-
-        $("#subheader").hide();
-        $("#sidebar").hide();
-    }
 };

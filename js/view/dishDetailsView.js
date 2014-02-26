@@ -7,9 +7,9 @@
 var DishDetailsView = function(container, model) {
 
     //TODO: not to keep this dishId in model
-    this.dishId = model.getSelectedDishDetailId(); 
+    this.dishId = 1;
 //    alert("DishDetailsView: dishId=" + this.dishId);
-    
+
     this.backButton = container.find("input[name=back]");
     this.confirmButton = container.find("input[name=confirmDish]");
 
@@ -17,11 +17,20 @@ var DishDetailsView = function(container, model) {
     this.selectedDishDetail = model.getDish(this.dishId);
 
     this.ingrdTable = container.find("table");
-    this.dishPrice = $("#dishPrice");
+    this.dishPrice = container.find("#dishPrice");
+
+    this.showView = function(dishId) {
+//        alert("DishDetailsView: dishId = " + dishId);
+        this.dishId = dishId;
+        $(container).show();
+
+
+        this.update();
+    }
+
 
     this.displayDishDetails = function() {
 
-        // alert(model.getSelectedDishDetailId());
 
         //display the row of image and ingrediant table
 
@@ -29,7 +38,7 @@ var DishDetailsView = function(container, model) {
         // var imageViewDetail = container.find("#descr");
 
         //dishName
-        var dishDetailName = $("#descr h3");
+        var dishDetailName = container.find("#descr h3");
         dishDetailName.html(this.selectedDishDetail.name);
         //  alert("selectedDishDetail name"+ this.selectedDishDetail.name);
         //dish img
@@ -85,17 +94,14 @@ var DishDetailsView = function(container, model) {
 
         //back to select button
         //display the row of preparation
-        var preparationRow = $("#preparation p");
-       // alert("create preparation dynamically");
+        var preparationRow = container.find("#preparation p");
+        // alert("create preparation dynamically");
         preparationRow.html(this.selectedDishDetail.preparation);
 
     };
 
     model.addObserver(this);
-
     this.update = function(arg) {
-        
-    this.dishId = model.getSelectedDishDetailId();
         this.selectedDishDetail = model.getDish(this.dishId);
         this.ingrdTable.empty();
         this.displayDishDetails();
@@ -103,8 +109,6 @@ var DishDetailsView = function(container, model) {
     };
 
 
-
-    this.update();
 
 };
 
