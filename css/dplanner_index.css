@@ -43,10 +43,14 @@ body{
 }
 
 #content_dinner_preparation {
+    padding-top: 20px;
     padding-left:15px;
     padding-right:15px;
 }
 
+#content_dinner_preparation .row{
+    padding:20px;
+}
 /*content_select_dish*/
 #content_select_dish .dishes_container{
     /*overflow-y:scroll;*/
